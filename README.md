@@ -31,7 +31,12 @@ export JASYPT_ENCRYPTOR_PASSWORD=symplesims; java -jar target/spring-embedded-ke
 ### init database
 - [postgresql](./docker/docker.md)
 
-### keycloak 
+### keycloak jdbc
+JDBC 연결 정보는 application.yml 과 keycloak-server.json 파일 두 곳을 설정 해야 합니다.  
+- [application.yml](./src/main/resources/application.yml)  
+- [keycloak-server.json](./src/main/resources/META-INF/keycloak-server.json)  
+
+### keycloak portal 
 - [oauth-authorization-server](http://localhost:8083/auth)  
 default login: admin / admin123$
 
