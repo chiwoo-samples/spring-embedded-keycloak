@@ -1,17 +1,33 @@
 server:
   port: 8083
+  error:
+    include-message: always
 
 spring:
+  application:
+    name: spring-embedded-keycloak
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/keycloak
+    driverClassName: org.postgresql.Driver
+    username: ENC(ovgUwNWh189wi6cLjamWQhmW2VqhJ6NqymG22RXyh0lzCOgIGBfJvfIMufJwDyOt)
+    password: ENC(AeqT/vwXgyhBTuvA8f3EtloEl8N+LwZeM4qg+o82m3EfdbVzqr+I53rC6wgxuFOe)
   jpa:
     defer-datasource-initialization: true
-  datasource:
-    username: sa
-    url: jdbc:h2:mem:customdb
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+    generate-ddl: true
 
 keycloak:
   server:
     contextPath: /auth
-    adminUser:
-      username: bael-admin
-      password: pass
     realmImportFile: baeldung-realm.json
+    adminUser:
+      username: ENC(4+RR1rtW1reOdks/UcHaRDS5DlyRa86LAKoQov1tGC75SVepFvLSlfkRmp1j2b4+)
+      password: ENC(ThxVPRFoaelQznG90u3wxRrMJ9jhwK9rbE4fbxsIetf24ny77C8QgWoDM/v/G0S9)
+
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD:symplesims}

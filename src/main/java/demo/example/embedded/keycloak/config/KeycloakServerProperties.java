@@ -1,15 +1,16 @@
-package com.baeldung.auth.config;
+package demo.example.embedded.keycloak.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "keycloak.server")
 public class KeycloakServerProperties {
+    private String contextPath = "/auth";
+    private String realmImportFile = "default-realm.json";
+    private AdminUser adminUser = new AdminUser();
 
-    String contextPath = "/auth";
-
-    String realmImportFile = "baeldung-realm.json";
-
-    AdminUser adminUser = new AdminUser();
+    public KeycloakServerProperties() {
+        super();
+    }
 
     public String getContextPath() {
         return contextPath;
@@ -17,14 +18,6 @@ public class KeycloakServerProperties {
 
     public void setContextPath(String contextPath) {
         this.contextPath = contextPath;
-    }
-
-    public AdminUser getAdminUser() {
-        return adminUser;
-    }
-
-    public void setAdminUser(AdminUser adminUser) {
-        this.adminUser = adminUser;
     }
 
     public String getRealmImportFile() {
@@ -35,11 +28,17 @@ public class KeycloakServerProperties {
         this.realmImportFile = realmImportFile;
     }
 
+    public AdminUser getAdminUser() {
+        return adminUser;
+    }
+
+    public void setAdminUser(AdminUser adminUser) {
+        this.adminUser = adminUser;
+    }
+
     public static class AdminUser {
-
-        String username = "admin";
-
-        String password = "admin";
+        private String username = "admin";
+        private String password = "admin";
 
         public String getUsername() {
             return username;

@@ -1,4 +1,4 @@
-package com.baeldung.auth.config;
+package demo.example.embedded.keycloak.config;
 
 import org.keycloak.services.util.JsonConfigProviderFactory;
 

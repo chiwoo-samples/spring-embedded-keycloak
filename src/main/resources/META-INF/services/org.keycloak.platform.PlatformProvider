@@ -1,1 +1,1 @@
-com.baeldung.auth.config.SimplePlatformProvider
+demo.example.embedded.keycloak.config.SimplePlatformProvider
