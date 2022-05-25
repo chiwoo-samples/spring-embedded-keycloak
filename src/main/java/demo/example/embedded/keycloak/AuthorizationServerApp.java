@@ -1,5 +1,4 @@
 package demo.example.embedded.keycloak;
-// AuthorizationServerApp
 
 import demo.example.embedded.keycloak.config.KeycloakServerProperties;
 import org.slf4j.Logger;
