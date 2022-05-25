@@ -47,3 +47,4 @@ default login: admin / admin123$
 - [Spring Boot Configuration with Jasypt](https://www.baeldung.com/spring-boot-jasypt)
 - [Jasypt Github](https://github.com/ulisesbocchio/jasypt-spring-boot)
 - [Keycloak to secure spring-boot microservices](https://hackmd.diverse-team.fr/s/HJ1zF5bM_)
+- [Simple Single Sign-On with Spring Security OAuth2](https://www.baeldung.com/sso-spring-security-oauth2)
