@@ -13,6 +13,7 @@ spring:
     driverClassName: org.postgresql.Driver
     username: ENC(ovgUwNWh189wi6cLjamWQhmW2VqhJ6NqymG22RXyh0lzCOgIGBfJvfIMufJwDyOt)
     password: ENC(AeqT/vwXgyhBTuvA8f3EtloEl8N+LwZeM4qg+o82m3EfdbVzqr+I53rC6wgxuFOe)
+    type:
   jpa:
     defer-datasource-initialization: true
     properties:
